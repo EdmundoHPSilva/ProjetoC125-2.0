@@ -1,33 +1,46 @@
 package br.inatel.TimeDeFutebol.Jogador;
 
-public abstract class Jogador {
+import br.inatel.TimeDeFutebol.Exceções.Intercept;
+
+import java.util.Random;
+
+public abstract class Jogador{
 
     //membros
     private int idade;
     private double peso, altura;
     private String nome, posicao;
+    boolean passe = new Random().nextBoolean();
 
-    //construtor
-    public Jogador(String nome, String posicao){
-        nome = this.nome;
-        posicao = this.posicao;
+    //construtores
+    public Jogador(String nome, String posicao) {
+        this.nome = nome;
+        this.posicao = posicao;
 
     }
+
 
     //metodos
     public void correr(){
-        System.out.println("O jogador está correndo!");
+        System.out.println("O jogador " + this.getNome() + " está correndo!");
     }
     public void chutar(){
-        System.out.println("O jogador está chutando!");
+        System.out.println("O jogador " + this.getNome() + " está chutando!");
     }
     public void cobrarLateral(){
-        System.out.println("O jogador está cobrando lateral!");
+        System.out.println("O jogador " + this.getNome() + " está cobrando lateral!");
     }
     public void cobrarFalta(){
-        System.out.println("O jogador está cobrando falta!");
+        System.out.println("O jogador " + this.getNome() + " está cobrando falta!");
     }
-    public void passarBola() { System.out.println("O jogador " + this.getNome() + " passou a bola para o próximo jogador!"); }
+    public void passarBola() {
+        if (passe) {
+            System.out.println("O jogador " + this.getNome() + " passou a bola para o próximo jogador!");
+        } else {
+            System.out.println("O jogador " + this.getNome() + " foi interceptado!");
+            System.exit(0);
+        }
+    }
 
     //getters
     public String getNome() {

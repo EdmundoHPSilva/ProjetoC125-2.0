@@ -14,7 +14,7 @@ public class Atacante extends Jogador {
     //métodos específicos
 
     public void Gol() {
-        System.out.println("O jogador " + getNome() + " chutou a bola para o gol. Será que entrou??");
+        System.out.println("O jogador " + this.getNome() + " chutou a bola para o gol. Será que entrou??");
         if (gol) {
             System.out.println("GOOLL!");
         } else {
