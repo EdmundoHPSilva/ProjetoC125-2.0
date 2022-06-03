@@ -3,11 +3,7 @@ package br.inatel.TimeDeFutebol.Fila;
 import javax.swing.*;
 
 class Fila{
-    int inicio;
-    int fim;
-    int tamanho;
-    int qtdeElementos;
-    int f[];
+    int inicio, fim, tamanho, qtdeElementos, f[];
 
     public Fila(){
         inicio = fim = -1;
@@ -16,14 +12,14 @@ class Fila{
         qtdeElementos = 0;
     }
 
-    public boolean estaVazia(){
+    public boolean Vazia(){
         if (qtdeElementos == 0){
             return true;
         }
         return false;
     }
 
-    public boolean estaCheia(){
+    public boolean Cheia(){
         if (qtdeElementos == tamanho - 1){
             return true;
         }
@@ -31,7 +27,7 @@ class Fila{
     }
 
     public void adicionar(int e){
-        if (! estaCheia()){
+        if (! Cheia()){
             if (inicio == -1){
                 inicio = 0;
             }
@@ -42,7 +38,7 @@ class Fila{
     }
 
     public void remover(){
-        if (! estaVazia() ){
+        if (! Vazia() ){
             inicio++;
             qtdeElementos--;
         }
