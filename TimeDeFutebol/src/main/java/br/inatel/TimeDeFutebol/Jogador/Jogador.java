@@ -17,7 +17,6 @@ public abstract class Jogador{
 
     }
 
-
     //metodos
     public void correr(){
         System.out.println("O jogador " + this.getNome() + " está correndo!");

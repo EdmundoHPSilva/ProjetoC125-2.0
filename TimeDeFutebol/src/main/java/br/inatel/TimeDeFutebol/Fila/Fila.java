@@ -1,33 +1,34 @@
 package br.inatel.TimeDeFutebol.Fila;
 
+import br.inatel.TimeDeFutebol.Jogador.Jogador;
 import javax.swing.*;
 
-public class Fila{
-    int inicio, fim, tamanho, qtdeElementos, f[];
+public class Fila {
+    int inicio, fim, tamanho, qtdeElementos = 0;
+     Object f[];
 
     public Fila(){
         inicio = fim = -1;
         tamanho = 5;
-        f = new int[tamanho];
-        qtdeElementos = 0;
+        f = new Object[tamanho];
     }
 
-    public boolean Vazia(){
+    public boolean vazia(){
         if (qtdeElementos == 0){
             return true;
         }
         return false;
     }
 
-    public boolean Cheia(){
+    public boolean cheia(){
         if (qtdeElementos == tamanho - 1){
             return true;
         }
         return false;
     }
 
-    public void adicionar(int e){
-        if (! Cheia()){
+    public void adicionar(Object e){
+        if (! cheia()){
             if (inicio == -1){
                 inicio = 0;
             }
@@ -38,7 +39,7 @@ public class Fila{
     }
 
     public void remover(){
-        if (! Vazia() ){
+        if (! vazia() ){
             inicio++;
             qtdeElementos--;
         }
