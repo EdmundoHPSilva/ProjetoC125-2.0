@@ -1,7 +1,5 @@
 package br.inatel.TimeDeFutebol.Jogador;
 
-import br.inatel.TimeDeFutebol.Exceções.Intercept;
-
 import java.util.Random;
 
 public abstract class Jogador{

@@ -1,5 +1,4 @@
 package br.inatel.TimeDeFutebol;
-import br.inatel.TimeDeFutebol.Exceções.Intercept;
 import br.inatel.TimeDeFutebol.Posições.Atacante;
 import br.inatel.TimeDeFutebol.Posições.Zagueiro;
 
