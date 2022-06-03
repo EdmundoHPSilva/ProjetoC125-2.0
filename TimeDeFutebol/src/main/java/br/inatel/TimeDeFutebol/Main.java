@@ -1,4 +1,5 @@
 package br.inatel.TimeDeFutebol;
+import br.inatel.TimeDeFutebol.Fila.Fila;
 import br.inatel.TimeDeFutebol.Posições.*;
 
 import java.util.ArrayList;
@@ -7,6 +8,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Object> listaJogadores = new ArrayList<>();
+
+        Fila fila = new Fila();
 
         Goleiro gl = new Goleiro("Ornstein", "Goleiro");
         Zagueiro zg = new Zagueiro("Velstadt", "atacante");

@@ -2,7 +2,7 @@ package br.inatel.TimeDeFutebol.Fila;
 
 import javax.swing.*;
 
-class Fila{
+public class Fila{
     int inicio, fim, tamanho, qtdeElementos, f[];
 
     public Fila(){
