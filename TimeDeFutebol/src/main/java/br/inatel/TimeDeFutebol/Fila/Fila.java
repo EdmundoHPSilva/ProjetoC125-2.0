@@ -7,7 +7,7 @@ class Fila{
 
     public Fila(){
         inicio = fim = -1;
-        tamanho = 100;
+        tamanho = 5;
         f = new int[tamanho];
         qtdeElementos = 0;
     }
